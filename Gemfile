@@ -17,9 +17,11 @@ end
 gem 'foundation-rails'
 # Use Devise
 gem 'devise'
-# User shoppe-stripe for commerce
+# Use shoppe-stripe for commerce
 gem 'shoppe', '~> 1.0'
 gem "shoppe-stripe", require: "shoppe/stripe"
+# Stripe for subscriptions
+gem 'stripe'
 #Gem for bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use SCSS for stylesheets

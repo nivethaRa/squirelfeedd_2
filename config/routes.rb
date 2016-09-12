@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get '/contact' => 'pages#contact'
   get '/profile' => 'pages#profile'
 
+  #Stripe resource route
+  resources :charges
+
   #shoppe routes
   get "product/:permalink", to: "products#show", as: "product"
   post "product/:permalink", to: "products#buy", as: "buy"

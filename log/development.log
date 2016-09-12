@@ -27617,3 +27617,172 @@ Processing by PagesController#home as HTML
   Rendered layouts/_nav_user.html.erb (0.3ms)
   Rendered layouts/_nav.html.erb (5.2ms)
 Completed 200 OK in 186ms (Views: 183.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-09-11 17:19:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (3.1ms)
+  [1m[35mShoppe::Order Load (151.4ms)[0m  SELECT  "shoppe_orders".* FROM "shoppe_orders" WHERE "shoppe_orders"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mShoppe::OrderItem Load (18.4ms)[0m  [1mSELECT "shoppe_order_items".* FROM "shoppe_order_items" WHERE "shoppe_order_items"."order_id" IN (2)[0m
+  [1m[35mShoppe::Setting Load (18.8ms)[0m  SELECT "shoppe_settings".* FROM "shoppe_settings"
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_nav_user.html.erb (0.9ms)
+  Rendered layouts/_nav.html.erb (99.3ms)
+Completed 200 OK in 9609ms (Views: 9112.5ms | ActiveRecord: 460.6ms)
+
+
+Started GET "/assets/application.self-f3add0ee2498c03a57f2c0593c147eb5c0e204905d5d8538a4aee7ed6bc65615.css?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.core.self-364829e0b975bcc15083d3e3e8a6032e1891525681f5a2797b88225aeb254d04.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.abide.self-433e642defac6b495106bcaa7f2a33c07efc1dad4c3970721631af8a2b52affc.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.accordionMenu.self-ddc1b5fe2518e8e010d7421f274eeee2595dbd92ad8f989fdd35e5e99df22901.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.accordion.self-867199f11bb3e04e7f526c2a7066f6f6fb63a7b7463c9e0aa46a1fd17f50dcf4.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.drilldown.self-5ad50f2159e6111481142f7cded35f7a01ccc0296df9fd47bbec8a833d3ac528.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.dropdown.self-0aaea1546348d69068be7d4056c123bd7c6fc32c5e353beae2f813ec7e7bcdaa.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.dropdownMenu.self-543ec74fdf728d2a5206aaf11e24517fabc449d24cfebf6aa8bd16f22d1ec59a.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.equalizer.self-d9f4d3851420fe7a3a790710a037ab7cce15f2ac5bfee75083dc4562504a829d.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.interchange.self-4d7fb26f42361b56dd6a00c17c945d63e28778f8b557855efeacf1909d9736de.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.magellan.self-5a035e151d949969cb0c71f1648ae0de21ac923b509717e453992319019433f9.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.offcanvas.self-67c65421577bbda4a4ba9d1dd176f94137847a33f9391ef4e8d7c2db8979bc15.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.orbit.self-3790b70d486b6233de7bf36256a99b4470bbf5bab8d5cdba23038a96bed7c426.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.responsiveMenu.self-04daa3af5d3c617fa7d588b45b56abd62539f5fde28756c7b4705de2aa10c4fd.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.responsiveToggle.self-15d27e3276f2100adb158282147ff40f7fc86c37419100d6101c600d2e4df01d.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.reveal.self-0300c0cf163642ecc7cfe13acc5d804220d7ff167ce44476387158ef00f8b81d.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.slider.self-ba8900795763ed1b094472775ecf0336b5618290cad8846aad2cf9a8a8f8fa30.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.sticky.self-7b2670d47ccb7e4585bc83165984a6771205e271683d98f95c3477a26378a53c.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.tabs.self-2e641c12d280fc8c560d070d5caf1e97560e035f955335b1244fa0ee0bb7291c.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.toggler.self-e503f9a635124ad4578a03dc24e47ac4cdb922a60bac8c9c99d024da00b0bd52.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.tooltip.self-f4a5241b4357a5343808a23760798cf20b489cbbcf5e74a062e4a1b060602253.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.util.box.self-a69a940a339cc126ec64c84a6acf527f82f6682290524ab62cfe66ce11f962fd.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.util.keyboard.self-9ddfc95ccf73ddc51ead522151b53198b30c6a400e9f3f0be725d55c30f01912.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.util.mediaQuery.self-d522742ee87b4a54a842faef77135e013604d6d9abf9e3656534c69b399bd188.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.util.motion.self-13d4248460aba53c0fd52e1ec0d5cb41c317b1c4d974bc5d905c9976dc9ef218.js?body=1" for ::1 at 2016-09-11 17:20:10 -0500
+
+
+Started GET "/assets/foundation.util.nest.self-c9876586f80b068aea0d01390583424a28fa305c450e12a49bb301dcc686d1a0.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/foundation.util.timerAndImageLoader.self-68c67c1b0b4f2e2cb7f2af57124f38f54b749efed9f1bebc44677dc27abf7864.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/foundation.util.touch.self-95e098450fe69653246bdfa7f1e7fe7dba15348524771d7b2c54c7c4298fccb5.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/foundation.util.triggers.self-71a2360cfe56c89eb46e0776c3d04601a8cce01d9e1098b808375eecc4b2418c.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/foundation.self-5ecf2f4d83e6260dabd6ec48e76d8ddebccf956563f34072221bf960d3b8c255.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/shoppe/stripe/form_handler.self-9db0fd5803cc2605ddd1b4aeda70542fa90c282978ac31b7bd65b6911847b20a.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/application.self-3f236054623d7285a76d64c2eb27bb2b2278905023008ee2c3c0333857b6184f.js?body=1" for ::1 at 2016-09-11 17:20:11 -0500
+
+
+Started GET "/assets/small_logo_brown_no_text.png" for ::1 at 2016-09-11 17:20:11 -0500
