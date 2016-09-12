@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/home' => 'pages#home'
   get '/contact' => 'pages#contact'
-  get '/profile' => 'pages#profile'
+  get '/profile/:id' => 'pages#profile'
 
   #Stripe resource route
   resources :charges
