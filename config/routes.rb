@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   #Define routes for pages
   get '/about' => 'pages#about'
   get '/home' => 'pages#home'
-  get '/contact' => 'pages#contact'
   get '/profile/:id' => 'pages#profile'
+
+  #Contact form
+  match '/contact', to: 'contact#new', via: 'get'
+  resources "contact", only: [:new, :create]
 
   #Stripe resource route
   resources :charges

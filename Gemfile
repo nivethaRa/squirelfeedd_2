@@ -22,6 +22,9 @@ gem 'shoppe', '~> 1.0'
 gem "shoppe-stripe", require: "shoppe/stripe"
 # Stripe for subscriptions
 gem 'stripe'
+#Gem for mailing forms
+gem 'mail_form'
+gem 'simple_form'
 #Gem for bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use SCSS for stylesheets
