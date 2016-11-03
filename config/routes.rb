@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/home' => 'pages#home'
   get '/profile/:id' => 'pages#profile'
 
+  resources :users
+
   #Contact form
   match '/contact', to: 'contact#new', via: 'get'
   resources "contact", only: [:new, :create]
