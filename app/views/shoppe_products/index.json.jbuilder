@@ -1,0 +1,1 @@
+json.array! @shoppe_products, partial: 'shoppe_products/shoppe_product', as: :shoppe_product

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shoppe Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parent</th>
+      <th>Name</th>
+      <th>Sku</th>
+      <th>Permalink</th>
+      <th>Description</th>
+      <th>Short description</th>
+      <th>Active</th>
+      <th>Weight</th>
+      <th>Price</th>
+      <th>Cost price</th>
+      <th>Tax rate</th>
+      <th>Featured</th>
+      <th>In the box</th>
+      <th>Stock control</th>
+      <th>Default</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shoppe_products.each do |shoppe_product| %>
+      <tr>
+        <td><%= shoppe_product.parent_id %></td>
+        <td><%= shoppe_product.name %></td>
+        <td><%= shoppe_product.sku %></td>
+        <td><%= shoppe_product.permalink %></td>
+        <td><%= shoppe_product.description %></td>
+        <td><%= shoppe_product.short_description %></td>
+        <td><%= shoppe_product.active %></td>
+        <td><%= shoppe_product.weight %></td>
+        <td><%= shoppe_product.price %></td>
+        <td><%= shoppe_product.cost_price %></td>
+        <td><%= shoppe_product.tax_rate_id %></td>
+        <td><%= shoppe_product.featured %></td>
+        <td><%= shoppe_product.in_the_box %></td>
+        <td><%= shoppe_product.stock_control %></td>
+        <td><%= shoppe_product.default %></td>
+        <td><%= link_to 'Show', shoppe_product %></td>
+        <td><%= link_to 'Edit', edit_shoppe_product_path(shoppe_product) %></td>
+        <td><%= link_to 'Destroy', shoppe_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shoppe product', new_shoppe_product_path %>

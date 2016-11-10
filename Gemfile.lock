@@ -224,10 +224,13 @@ GEM
     mail_form (1.5.1)
       actionmailer (>= 3.2, < 5)
       activemodel (>= 3.2, < 5)
+    metaclass (0.0.4)
     mime-types (2.99.2)
     mini_magick (4.2.10)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
+    mocha (1.2.1)
+      metaclass (~> 0.0.1)
     multi_json (1.12.1)
     net-ssh (3.0.2)
     netrc (0.11.0)
@@ -375,12 +378,14 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise
   foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   mail_form
+  mocha
   pg
   rails (= 4.2.6)
   sass-rails (~> 5.0)

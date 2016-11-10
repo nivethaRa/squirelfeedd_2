@@ -1,0 +1,2 @@
+json.extract! shoppe_product, :id, :parent_id, :name, :sku, :permalink, :description, :short_description, :active, :weight, :price, :cost_price, :tax_rate_id, :featured, :in_the_box, :stock_control, :default, :created_at, :updated_at
+json.url shoppe_product_url(shoppe_product, format: :json)

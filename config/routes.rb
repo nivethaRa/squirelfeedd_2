@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :shoppe_products
   mount Shoppe::Engine => "/shoppe"
   devise_for :users
 

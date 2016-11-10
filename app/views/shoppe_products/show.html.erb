@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @shoppe_product.parent_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shoppe_product.name %>
+</p>
+
+<p>
+  <strong>Sku:</strong>
+  <%= @shoppe_product.sku %>
+</p>
+
+<p>
+  <strong>Permalink:</strong>
+  <%= @shoppe_product.permalink %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @shoppe_product.description %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @shoppe_product.short_description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @shoppe_product.active %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @shoppe_product.weight %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @shoppe_product.price %>
+</p>
+
+<p>
+  <strong>Cost price:</strong>
+  <%= @shoppe_product.cost_price %>
+</p>
+
+<p>
+  <strong>Tax rate:</strong>
+  <%= @shoppe_product.tax_rate_id %>
+</p>
+
+<p>
+  <strong>Featured:</strong>
+  <%= @shoppe_product.featured %>
+</p>
+
+<p>
+  <strong>In the box:</strong>
+  <%= @shoppe_product.in_the_box %>
+</p>
+
+<p>
+  <strong>Stock control:</strong>
+  <%= @shoppe_product.stock_control %>
+</p>
+
+<p>
+  <strong>Default:</strong>
+  <%= @shoppe_product.default %>
+</p>
+
+<%= link_to 'Edit', edit_shoppe_product_path(@shoppe_product) %> |
+<%= link_to 'Back', shoppe_products_path %>
