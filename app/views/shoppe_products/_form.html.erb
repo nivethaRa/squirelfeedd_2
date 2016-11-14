@@ -1,4 +1,4 @@
-<%= simple_form_for(@shoppe_product) do |f| %>
+<%= simple_form_for(@shoppe_product, :multipart => true) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -19,6 +19,7 @@
     <%= f.input :default %>
   </div>
 
+  <%= f.file_field :images, multiple: true %>
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

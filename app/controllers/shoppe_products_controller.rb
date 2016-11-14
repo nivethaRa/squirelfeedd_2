@@ -4,7 +4,7 @@ class ShoppeProductsController < ApplicationController
   # GET /shoppe_products
   # GET /shoppe_products.json
   def index
-    @shoppe_products = ShoppeProduct.all
+    @shoppe_products = ShoppeProduct.where(active: true)
   end
 
   # GET /shoppe_products/1
@@ -69,6 +69,6 @@ class ShoppeProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shoppe_product_params
-      params.require(:shoppe_product).permit(:parent_id, :name, :sku, :permalink, :description, :short_description, :active, :weight, :price, :cost_price, :tax_rate_id, :featured, :in_the_box, :stock_control, :default)
+      params.require(:shoppe_product).permit(:parent_id, :name, :sku, :permalink, :description, :short_description, :active, :weight, :price, :cost_price, :tax_rate_id, :featured, :in_the_box, :stock_control, :default, {images: []})
     end
 end

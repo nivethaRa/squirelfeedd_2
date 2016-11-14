@@ -17,4 +17,5 @@ class ProductsController < ApplicationController
   	redirect_to product_path(@product.permalink), :notice => "Product has been added successfuly!"
   end
 
+
 end
