@@ -1,8 +1,22 @@
 Rails.application.routes.draw do
 
+  get 'chats/index'
+
+  get 'chats/show'
+
+  get 'chats/create'
+
+  get 'chats/destroy'
+
   resources :shoppe_products
   mount Shoppe::Engine => "/shoppe"
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    registrations: 'users/registrations',
+    passwords: 'users/passwords',
+    unblocks: 'users/unblocks',
+    confirmations: 'users/confirmations'
+  }
 
   #Index page/root URL: home
   root 'pages#home'
