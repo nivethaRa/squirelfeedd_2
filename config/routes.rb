@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations'
   }
 
+  get '/users/:id/chef_requests/new' => 'chef_requests#new', as: :new_chef_request
+  post '/users/:id/chef_requests' => 'chef_requests#create', as: :post_chef_request
+
   #Index page/root URL: home
   root 'pages#home'
 
@@ -29,7 +32,7 @@ Rails.application.routes.draw do
   #Contact form
   match '/contact', to: 'contact#new', via: 'get'
   resources "contact", only: [:new, :create]
-
+  
   #Stripe resource route
   resources :charges
 
