@@ -19,13 +19,15 @@
     </p>
     <% end %>
     <%= link_to "View basket", basket_path %>
-    <%= flash[:notice] %>
-    <%= link_to "Checkout", checkout_path %>
+    
 
     <!--navbar render code -->
     <%= render '/layouts/nav' %>
-        <span class="notice"><%= notice %></span>
-        <span class="alert"><%= alert %></span>
-        <%= yield %>
+    <br /><br /><br />
+    <% if notice %>
+      <div style="width: 50%; margin-left: 25%;" class = 'alert alert-warning'><%= notice %></div>
+    <% end %>
+
+    <%= yield %>
   </body>
 </html>

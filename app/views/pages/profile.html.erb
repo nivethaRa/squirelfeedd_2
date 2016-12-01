@@ -65,7 +65,9 @@
 			</div>
   		</div>
   	</div>
-    <%= link_to 'Become a chef', new_chef_request_path(@user.id), class: 'btn btn-primary' %>
+    <% if !@user.has_submitted_chef_request? %>
+      <%= link_to 'Become a chef', new_chef_request_path(@user.id), class: 'btn btn-primary' %>
+    <% end %>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>

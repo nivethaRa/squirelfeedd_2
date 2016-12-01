@@ -1,0 +1,2 @@
+module ChefRequestsHelper
+end

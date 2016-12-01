@@ -1,0 +1,95 @@
+<body>
+  <div class="row">
+    <div class="jumbotron">
+      <div class="container text-center">
+        <h1>Become a chef
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <%= form_for @user, url: post_chef_request_path(@user.id), method: 'post' do |f| %>
+              <div class="col-lg-3">
+                <%= f.label :city %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :city, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :state %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :state, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :job %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :job, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :school %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :school, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :address_line_1 %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :address_line_1, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :address_line_2 %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :address_line_2, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :pincode %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :pincode, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :country %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.text_field :country, class: 'form-control' %>
+              </div>
+              <br /><br /><br />
+
+              <div class="col-lg-3">
+                <%= f.label :delivery_and_pickup_available %> 
+              </div>
+              <div class="col-lg-9">
+                <%= f.check_box :delivery_and_pickup_available %>
+              </div>
+              <br /><br />
+
+              <%= hidden_field_tag 'user[has_submitted_chef_request]', true %>
+              
+              <%= f.submit 'Submit', class: 'btn btn-success' %>
+            <% end %>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>  
