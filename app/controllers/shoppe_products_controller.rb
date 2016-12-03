@@ -25,7 +25,7 @@ class ShoppeProductsController < ApplicationController
   # POST /shoppe_products.json
   def create
     @shoppe_product = ShoppeProduct.new(shoppe_product_params)
-
+    
     respond_to do |format|
       if @shoppe_product.save
         format.html { redirect_to @shoppe_product, notice: 'Shoppe product was successfully created.' }

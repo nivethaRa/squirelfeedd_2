@@ -42,10 +42,15 @@ Rails.application.routes.draw do
   post "product/:permalink", to: "products#buy"
   get "basket", to: "orders#show"
   delete "basket", to: "orders#destroy"
+  
   match "checkout", to: "orders#checkout", as: "checkout", via: [:get, :patch]
   match "checkout/pay", to: "orders#payment", as: "checkout_payment", via: [:get, :post]
   match "checkout/confirm", to: "orders#confirmation", as: "checkout_confirmation", via: [:get, :post]
 
+  get '/chef/:id' => 'users#chef_profile', as: :chef_profile
+
+  get '/users/:id/follow' => 'followers#create', as: :follow_chef
+  delete '/users/:id/unfollow' => 'followers#destroy', as: :un_follow_chef
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

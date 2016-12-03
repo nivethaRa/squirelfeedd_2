@@ -1,0 +1,80 @@
+<!doctype html>
+<% content_for :title, "Chef's Profile" %>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Squirel</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Css -->
+    <link href="/assets/bootstrap-assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="/assets/main.css" rel="stylesheet">
+
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body>
+    <div class="row">
+      <div class="jumbotron">
+        <div class="container text-center">
+        <h1>
+      </h1>
+      </div>
+  </div>
+
+      <div class="col-xs-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <img src="/assets/profile_pic_default.png">
+            <p class="profile">
+              <%= @chef.name %>'s Profile</p>
+          </div>
+      </div>
+      </div>
+      <div class="col-xs-6">
+      <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="feed">Eventually, you'll have a feed here!</p>
+          </div>
+      </div>    
+    </div>
+      <div class="col-xs-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <p class="about">...and all your settings and stuff will go here!
+            </p>
+          </div>
+      </div>
+      </div>
+    </div>
+    <% if current_user != @chef# && @chef.chef_request_approved? %>
+      <% if !@chef.followers.map(&:follower_id).include?(current_user.id) %>
+        <%= link_to 'Follow', follow_chef_path(@chef.id), class: 'btn btn-primary' %>
+      <% else %>
+        <%= link_to 'Unfollow', un_follow_chef_path(@chef.id), data: { confirm: "Are you sure?" }, method: :delete,  class: 'btn btn-primary' %>
+      <% end %>  
+    <% end %>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
